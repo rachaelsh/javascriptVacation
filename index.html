@@ -3,16 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>JavaScript DOM Manipulation Practice</title>
-    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="styles.css">
     <script src="https://use.fontawesome.com/b4ccb25300.js"></script>
   </head>
   <body>
+        <script src="https://use.fontawesome.com/b4ccb25300.js"></script>
+
     <div class="container">
       <div class="headtext">
         <h1>Vacation Destinations of the World</h1>
-        <button class="scam" type="button">CLICK HERE</button>
-        <i class="fa fa-bars fa-2x menu"></i>
+      </div>
 
+      <!--menu-->
+      <div class="dropMenu">
+        <button onclick = "dontClick()" class="scam" type="button">CLICK HERE</button>
+        <i id="menu" onclick="menuToggle()" class="fa fa-bars fa-2x menu" ></i>
+
+
+      <div class="mainLinks">  
         <h2><i class="fa fa-arrows-v"></i> Useful Links</h2>
         <a href="#">Vacation Planning</a>
         <a href="#">Snorkeling</a>
@@ -23,16 +31,17 @@
       <div class="linkbox">
         <i class="fa fa-arrow-left fa-3x"></i>
         <div class="box">
-          <img src="images/cancun.jpg" />
+          <img class="cancun" onclick="picFadeCancun()" src="images/cancun.jpg" />
         </div>
         <div class="box">
-          <img src="images/hawaii-art.jpg" />
+          <img id="hawaii" onclick="picFadeHawaii()" src="images/hawaii-art.jpg" />
         </div>
         <div class="box">
-          <img src="images/nyc.jpeg" />
+          <img id="nyc" onclick="picFadeNYC()" src="images/nyc.jpeg" />
         </div>
         <i class="fa fa-arrow-right fa-3x"></i>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
